@@ -1,0 +1,8 @@
+function one() {
+	let a = 1
+	function() {
+		let b = 2
+		console.log(a) // так!
+	}
+	console.log(b) // нет
+}

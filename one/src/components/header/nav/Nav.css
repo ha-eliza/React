@@ -1,0 +1,18 @@
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: rgb(210, 255, 255);
+  padding: 20px 0;
+  margin: 0;
+  font-weight: bold;
+}
+nav a{
+  text-decoration: none;
+  color: rgb(46, 34, 34);
+  transition: color .1s ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(215, 57, 57);
+}
