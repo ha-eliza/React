@@ -1,0 +1,14 @@
+.small {
+  width: 40%;
+  margin-top: 20px;
+  cursor: pointer;
+  filter: sepia(1);
+}
+.big {
+  width: 80%;
+  height: 95vh;
+  object-fit: cover;
+  box-shadow: 5px 5px 12px 2px gray;
+  cursor: pointer;
+  padding: 5px;
+}
