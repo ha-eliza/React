@@ -1,0 +1,18 @@
+.title {
+  margin-bottom: 50px;
+}
+ol {
+  padding: 0;
+  list-style: none;
+}
+ol li {
+  margin: 10px 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px #9a9a9a;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+ol li:active {
+  background-color: green;
+}
