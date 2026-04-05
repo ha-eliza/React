@@ -1,22 +1,15 @@
 import { useState } from "react";
 
 function Task(props) {
-  let { task, deleteTask } = props;
-
-  let [done, SetDone] = useState(false);
-  let isDone = () => SetDone(true);
-
-  let taskDelete = () => {
-    deleteTask(task.id);
-  }
+  let { task, deleteTask, doneTask } = props;
 
   return (
     <>
       <div className="task">
-        <div style={{ textDecoration: done ? 'line-through' : 'none' }}>{task.text}</div>
+        <div style={{ textDecoration: task.done ? 'line-through' : 'none' }}>{task.text}</div>
         <div className="buttons">
-          <button onClick={isDone}>Done</button>
-          <button onClick={taskDelete}>&times;</button>
+          <button onClick={doneTask}>Done</button>
+          <button onClick={deleteTask}>&times;</button>
         </div>
       </div>
     </>
