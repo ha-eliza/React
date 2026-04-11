@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Users from "./components/users/Users";
 import Success from "./components/success/Success";
+import Buttons from "./components/buttons/Buttons";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -29,6 +30,7 @@ function App() {
   };
   return (
     <div className="main">
+      <Buttons />
       {success ? (
         <Success count={invites.length}/>
       ) : (
