@@ -1,7 +1,9 @@
 import "./App.css";
 import { useState } from "react";
-import Form from "./Form";
-import Task from "./Task";
+// import Form from "./Form";
+// import Task from "./Task";
+import Counter from "./Counter";
+import Text from "./Text";
 
 function App() {
   let [tasks, setTasks] = useState([]);
@@ -19,9 +21,11 @@ function App() {
     newTask[index].done = !newTask[index].done
     setTasks(newTask);
   }
+
+  let [isCounter, setCounter] = useState(false)
   return (
     <div className="App">
-      <div className="task-list">
+      {/* <div className="task-list">
         {
           console.log(tasks)
         }
@@ -33,7 +37,11 @@ function App() {
           doneTask={() => doneTask(index)}/>
         ))}
         <Form addTask={addTask} />
-      </div>
+      </div> */}
+      <button onClick={() => setCounter(!isCounter)}>Toggle Counter</button>
+      <br />
+      {isCounter && <Counter />}
+      <Text />
     </div>
   );
 }

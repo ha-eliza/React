@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Counter() {
   let [cnt, setCnt] = useState(0);
@@ -6,6 +6,9 @@ function Counter() {
     setCnt(cnt + 1);
   }
   let decrement = () => setCnt(cnt - 1);
+  useEffect(() => {
+
+  }, [cnt])
   return (
     <>
       <button onClick={() => setCnt(cnt - 2)}>--</button>
