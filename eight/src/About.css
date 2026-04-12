@@ -1,0 +1,18 @@
+.about {
+  margin: 25px;
+}
+.about ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.about li {
+  box-shadow: 0 0 2px #000;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 100%;
+}
