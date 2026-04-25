@@ -13,3 +13,8 @@ export interface Todo {
   title: string,
   completed: boolean
 }
+export interface Post {
+  id: number,
+  title: string,
+  body: string
+}
