@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 350px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+}
+.card a {
+  color: #ff7700;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #ff7700;
+}
