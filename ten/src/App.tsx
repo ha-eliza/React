@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import Card, { CardVariant } from './components/Card';
-import UserItem from './components/UserItem';
-import List from './components/List';
-import { Todo, User, Post } from './types/types'
 import './App.css';
-import TodoItem from './components/TodoItem';
+import { CardVariant } from './components/Card';
+import Card from './components/Card';
+import List from './components/List';
+import { User, Todo, Post } from './types/types';
+import EventsExample from './components/EventsExample';
+import UserItem from './components/UserItem';
 import PostItem from './components/PostItem';
+import TodoItem from './components/TodoItem';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([])
@@ -28,8 +30,9 @@ function App() {
   }, [])
   return (
     <div className="App">
+      <EventsExample />
       <Card onClick={() => console.log('Click')} width="340px" height="256px" variant={CardVariant.primary}>
-        <button>Кнопка</button>
+      <button>Кнопка</button>
       </Card>
       <List items={users} renderItem={(user: User) => <UserItem user={user} key={user.id}/>}/>
       <List items={todos} renderItem={(todo: Todo) => <TodoItem todo={todo} key={todo.id}/>}/>
