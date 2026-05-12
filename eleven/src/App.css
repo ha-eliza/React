@@ -139,3 +139,28 @@ body {
   font-size: 16px;
   outline: none;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.card {
+  max-width: 45%;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #365a00;
+}
+.card img {
+  width: 150px;
+  height: auto;
+}
+.card button {
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}

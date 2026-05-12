@@ -1,44 +1,28 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import "./App.css";
-import demoToys from "./demoToys";
-import Toys from "./models/Toys";
-import AddToysForm from "./components/AddToysForm";
-import DisplayToys from "./components/DisplayToys";
-import Search from "./components/Search";
+import Card from "./components/Card";
 
 const App: FC = () => {
-  const [toysList, setToysList] = useState<Toys[]>(demoToys);
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const addToys = (newToys: Toys) => {
-    setToysList([...toysList, newToys]);
-  };
-  const updateToys = (newToys: Toys) => {
-    setToysList(
-      toysList.map((toys) => (toys.id === newToys.id ? newToys : toys)),
-    );
-  };
-  const deleteToy = (id: number) => {
-    setToysList(toysList.filter((toy) => toy.id !== id));
-  };
-  const filteredToys = toysList.filter((toy) =>
-    toy.title.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
   return (
     <div className="main">
-      <div className="wrap">
-        <div className="block">
-          <h1 className="heading">Детские игрушки</h1>
-          <AddToysForm addToys={addToys} />
-        </div>
-        <Search handleSearch={setSearchQuery} />
-        <div className="display">
-          <DisplayToys
-            toysList={filteredToys}
-            updateToys={updateToys}
-            deleteToy={deleteToy}
-          />
-        </div>
-      </div>
+      <Card
+        image="https://avatars.mds.yandex.net/i?id=ee0b891261bcba1fb8edcc68b9a677fa417ecf63-9052188-images-thumbs&n=13"
+        desc="TypeScript - строго типизированный язык программирования основанный на JavaScript"
+      >
+        TypeScript — язык программирования, доработанная версия JavaScript.
+        Представлен компанией Microsoft в 2012 году. Позиционируется как
+        инструмент, расширяющий возможности JavaScript.
+      </Card>
+      <Card
+        image="https://avatars.mds.yandex.net/i?id=370a327fd0cf52873c93bfd15ec1109d-3526614-images-thumbs&n=13"
+        desc="React - это JavaScript библиотека"
+      >
+        React (иногда React.js или ReactJS) — декларативная
+        JavaScript-библиотека с открытым исходным кодом для разработки
+        пользовательских интерфейсов. Может использоваться для разработки
+        веб-приложений (включая многостраничные и серверные) и мобильных
+        приложений
+      </Card>
     </div>
   );
 };
