@@ -5,21 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "eject": "react-scripts eject",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
     "core-js": "^3.8.3",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -31,16 +21,14 @@
     "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
     "root": true,
     "env": {
       "node": true
     },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
@@ -51,7 +39,5 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ],
-  "_id": "three@0.1.0",
-  "readme": "ERROR: No README data found!"
+  ]
 }
