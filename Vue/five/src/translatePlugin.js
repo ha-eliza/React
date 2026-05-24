@@ -1,10 +1,8 @@
 export default {
   install(app, options) {
     let current = "ru";
-    const changeLang = (name) => {
-      if (options[name]) {
-        current = name;
-      }
+    const changeLang = () => {
+        current = current === 'ru' ? 'en' : 'ru'
     };
     app.config.globalProperties.$alert = (text) => {
       window.alert(text);
