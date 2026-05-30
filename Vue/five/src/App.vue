@@ -82,16 +82,27 @@ export default {
       <button @click="changeLang">Переключить язык</button>
       <button @click="$alert('Yes')">Alert</button>
     </div>
+    <button @click="modal=true">Открыть окно</button>
+    <app-modal v-if="modal" @close="modal=false"></app-modal>
   </div>
 </template>
 <script>
+import AppModal from './components/AppModal.vue';
 export default {
+  data() {
+    return {
+      modal: false
+    }
+  },
   inject: ['language'],
   methods: {
     changeLang() {
       this.language('en')
       this.$forceUpdate()
     }
+  },
+  components: {
+    AppModal
   }
 }
 </script>
