@@ -36,3 +36,16 @@ h1 {
 .warning {
   background-color: orange;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 35px;
+}
+.router-link-active {
+  color: rgb(167, 0, 0);
+}

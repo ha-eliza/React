@@ -1,23 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LoginApp from "./views/LoginApp.vue";
-import ForgetApp from "./views/ForgetApp.vue";
-import DashboardApp from "./views/DashboardApp.vue";
-import MailApp from "./views/MailApp.vue";
+import AboutApp from "./views/AboutApp.vue";
+import ContactApp from "./views/ContactApp.vue";
+import MainApp from "./views/MainApp.vue";
 
 export default createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/login', component: LoginApp
+      path: '/about', component: AboutApp
     },
     {
-      path: '/forget', component: ForgetApp
+      path: '/contact', component: ContactApp
     },
     {
-      path: '/dashboard', component: DashboardApp
+      path: '/main', component: MainApp
     },
-    {
-      path: '/mail', component: MailApp
-    }
   ]
 })
