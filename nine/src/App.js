@@ -5,8 +5,8 @@ import Home from "./pages/main/Home";
 import About from "./pages/main/About";
 import Contact from "./pages/main/Contact";
 import NotFound from "./pages/main/NotFound";
-import Category from "./pages/main/Category";
-import Recipe from "./pages/main/Recipe";
+// import Category from "./pages/main/Category";
+// import Recipe from "./pages/main/Recipe";
 
 function App() {
   const text = {
@@ -20,8 +20,9 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About text={text}/>} />
         <Route path="contact" element={<Contact />} />
-        <Route path="category/:name" element={<Category />}/>
-        <Route path="category/:name/:id"  element={<Recipe />}/>
+        <Route path="article" element={<Home />} />
+        {/* <Route path="category/:name" element={<Category />}/>
+        <Route path="category/:name/:id"  element={<Recipe />}/> */}
         <Route path="*" element={<NotFound />}/>
       </Route>
     </Routes>
